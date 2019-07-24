@@ -19,7 +19,16 @@ export default class xTerminal {
       rightClickSelectsWord: true
     });
 
-    this.onDataListener = this.term.onData(data => this.handleData(data));
+    this.onDataListener = this.term.onData(data => {
+      if (data.length > 3 && data.charCodeAt(0) !== 0x1b) {
+        const normData = data.replace(/[\r\n]+/g, '\r');
+        Array.from(normData).forEach(c => {
+          this.handleData(c);
+        });
+      } else {
+        this.handleData(data);
+      }
+    });
     this.term.open(el);
     this.term.fit();
     this.term.focus();

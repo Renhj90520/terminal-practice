@@ -11,10 +11,6 @@ export class AppComponent implements OnInit {
   constructor(private el: ElementRef) {}
   ngOnInit(): void {
     this.term = new xTerminal(this.el.nativeElement);
-
-    setTimeout(() => {
-      this.term.destroy();
-    }, 3000);
   }
 
   @HostListener('window:resize')
