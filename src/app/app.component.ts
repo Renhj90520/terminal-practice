@@ -6,15 +6,4 @@ import xTerminal from './Terminal';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent implements OnInit {
-  term;
-  constructor(private el: ElementRef) {}
-  ngOnInit(): void {
-    this.term = new xTerminal(this.el.nativeElement);
-  }
-
-  @HostListener('window:resize')
-  resize() {
-    this.term.resize();
-  }
-}
+export class AppComponent {}
