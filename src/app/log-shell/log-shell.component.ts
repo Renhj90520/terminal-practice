@@ -214,6 +214,8 @@ export class LogShellComponent implements OnInit {
     let html = '';
     this.messages.forEach(msg => {
       const match = msg.match(/^\[?([^ \]]+)\]?\s/);
+      // const match = msg.match(/^\[?([^\]]+\s\+\d\d\:\d\d)\]?\s/);
+      //2019-08-26 00:08:04.324 +08:00 [Information] User profile is available. Using '"/root/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
       let dateStr = '';
       let msgStr = '';
       if (match) {
