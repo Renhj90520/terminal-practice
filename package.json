@@ -19,7 +19,7 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
-    "ansi_up": "^4.0.3",
+    "ansi_up": "^5.0.0",
     "core-js": "^2.5.4",
     "moment": "^2.24.0",
     "normalize.css": "^8.0.1",
